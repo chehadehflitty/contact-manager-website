@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 class ContactController extends Controller
 {
-    function index(){
+    function getAll(){
         $contacts=Contact::all();
         return response()->json($contacts);
     }
@@ -28,15 +28,15 @@ class ContactController extends Controller
     }
 
     function update(Request $request,$id){
-        $validatedData = $request->validate([
+        $dataToUpdate = $request->validate([
             'name' => 'required|max:255',
             'phone_number' => 'required|max:20',
-            'latitude' => 'required|numeric',
-            'longitude' => 'required|numeric',
+            'latitude' => 'required',
+            'longitude' => 'required',
         ]);
 
         $contact=Contact::findOrFail($id);
-        $contact->update($validateData);
+        $contact->update($dataToUpdate);
         return response()->json($contact);
     }
 
