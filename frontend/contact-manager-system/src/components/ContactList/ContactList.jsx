@@ -17,9 +17,11 @@ const ContactList = () => {
       {contacts.map((contact) => (
         <ContactCard 
         name={contact.name}
+        id={contact.id}
         phone_number={contact.phone_number}
         latitude={contact.latitude}
-        longitude={contact.longitude} />
+        longitude={contact.longitude}
+         />
       ))}
     </div>
   );

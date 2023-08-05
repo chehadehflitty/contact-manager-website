@@ -9,8 +9,8 @@ const App = () => {
   return (
     <div className="flex">
       <ContactForm setContacts={setContacts} contacts={contacts} />
-      <ContactList contacts={contacts} />
-      
+      {/* <ContactList contacts={contacts} /> */}
+      <ContactList setContacts={setContacts} contacts={contacts} />
     </div>
   );
 };
