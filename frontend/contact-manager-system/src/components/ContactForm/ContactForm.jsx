@@ -27,10 +27,10 @@ const ContactForm = () => {
 
   return (
     <form className="contact_inputs" onSubmit={submit}>
-      <input type="text" name="name" placeholder="Name" value={contacts.name} onChange={change} />
-      <input type="text" name="phone_number" placeholder="Phone Number" value={contacts.phone_number} onChange={change} />
-      <input type="text" name="latitude" placeholder="Latitude" value={contacts.latitude} onChange={change} />
-      <input type="text" name="longitude" placeholder="Longitude" value={contacts.longitude} onChange={change} />
+      <input type="text" name="name" className='input' placeholder="Name" value={contacts.name} onChange={change} />
+      <input type="text" name="phone_number" className='input' placeholder="Phone Number" value={contacts.phone_number} onChange={change} />
+      <input type="text" name="latitude" className='input' placeholder="Latitude" value={contacts.latitude} onChange={change} />
+      <input type="text" name="longitude" className='input' placeholder="Longitude" value={contacts.longitude} onChange={change} />
       <button type="submit">Add Contact</button>
     </form>
   );

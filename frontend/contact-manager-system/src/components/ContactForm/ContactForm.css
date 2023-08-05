@@ -8,3 +8,9 @@
   background-color: #191645;
   gap: 30px;
 }
+
+.input{
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+}
