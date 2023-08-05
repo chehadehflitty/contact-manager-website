@@ -1,0 +1,10 @@
+.contact_inputs{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  /* border-style: solid; */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #191645;
+  gap: 30px;
+}

@@ -13,7 +13,7 @@ const ContactList = () => {
   }, []);
 
   return (
-    <div className="contact-list">
+    <div className="contact_list">
       {contacts.map((contact) => (
         <ContactCard 
         name={contact.name}
@@ -28,4 +28,6 @@ const ContactList = () => {
 };
 
 export default ContactList;
+
+
 

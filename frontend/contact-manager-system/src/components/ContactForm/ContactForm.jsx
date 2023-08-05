@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import"./ContactForm.css"
 
 const ContactForm = () => {
   const [contacts, setContacts] = useState({
@@ -19,12 +20,13 @@ const ContactForm = () => {
     axios.post('http://127.0.0.1:8000/api/putContact', contacts)
       .then(response => {
         console.log('Contact added successfully', response.data);
+
       })
       .catch(error => console.log(error));
   };
 
   return (
-    <form className="contact-form" onSubmit={submit}>
+    <form className="contact_inputs" onSubmit={submit}>
       <input type="text" name="name" placeholder="Name" value={contacts.name} onChange={change} />
       <input type="text" name="phone_number" placeholder="Phone Number" value={contacts.phone_number} onChange={change} />
       <input type="text" name="latitude" placeholder="Latitude" value={contacts.latitude} onChange={change} />
