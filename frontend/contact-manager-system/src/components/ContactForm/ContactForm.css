@@ -14,3 +14,15 @@
   border-radius: 5px;
   padding: 5px;
 }
+
+.add{
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  background: #43c6ac;
+}
+
+.add:hover{
+  background: linear-gradient(#43c6ac,#5f5d8f);
+  cursor: pointer;
+}

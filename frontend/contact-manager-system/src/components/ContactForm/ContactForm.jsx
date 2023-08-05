@@ -31,7 +31,7 @@ const ContactForm = () => {
       <input type="text" name="phone_number" className='input' placeholder="Phone Number" value={contacts.phone_number} onChange={change} />
       <input type="text" name="latitude" className='input' placeholder="Latitude" value={contacts.latitude} onChange={change} />
       <input type="text" name="longitude" className='input' placeholder="Longitude" value={contacts.longitude} onChange={change} />
-      <button type="submit">Add Contact</button>
+      <button type="submit" className='add'>Add Contact</button>
     </form>
   );
 };
