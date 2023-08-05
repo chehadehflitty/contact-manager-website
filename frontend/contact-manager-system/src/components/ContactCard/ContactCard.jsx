@@ -12,12 +12,12 @@ const ContactCard = ({ name, phone_number, latitude, longitude,id }) => {
     
   };
   return (
-    <div className="flex">
-      <p>{name}</p>
+    <div className="card">
+      <p className="name">{name}</p>
       <p>{phone_number}</p>
       <p>{latitude}</p>
       <p>{longitude}</p>
-      <button onClick={Delete}>Delete Contact</button>
+      <button onClick={Delete} className="delete">Delete Contact</button>
     </div>
   );
 };

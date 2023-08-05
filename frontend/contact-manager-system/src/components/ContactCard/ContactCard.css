@@ -1,0 +1,25 @@
+.card{
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.delete{
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+  background: #43c6ac;
+}
+
+.delete:hover{
+  background: linear-gradient(#43c6ac,#5f5d8f);
+  cursor: pointer;
+}
+
+.name{
+  font-weight: 900;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
