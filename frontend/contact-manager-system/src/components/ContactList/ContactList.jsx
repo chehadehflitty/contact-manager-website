@@ -2,7 +2,7 @@ import "./ContactList.css";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ContactCard from "../ContactCard/ContactCard";
-
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 const ContactList = () => {
   const [contacts, setContacts] = useState([]);
 
@@ -22,7 +22,22 @@ const ContactList = () => {
         latitude={contact.latitude}
         longitude={contact.longitude}
          />
+        
       ))}
+      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          {contacts.map(contact => (
+          <Marker key={contact.id} position={[contact.latitude, contact.longitude]}>
+            <Popup>
+              Name: {contact.name}<br />
+              Phone: {contact.phone_number}
+            </Popup>
+          </Marker>
+          ))}
+        </MapContainer>
     </div>
   );
 };
